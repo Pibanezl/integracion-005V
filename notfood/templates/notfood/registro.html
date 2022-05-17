@@ -1,0 +1,16 @@
+{% extends 'notfood/base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'notfood/' %}css/style.css">
+{% block contenido %}
+<h1 class="mt-5">
+    Registro de usuario.
+</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="reset" value="Limpiar">
+    <input type="submit" value="Registrar">
+</form>
+{% endblock contenido %}
