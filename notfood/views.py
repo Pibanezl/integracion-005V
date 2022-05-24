@@ -1,11 +1,16 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from .forms import CustomUserForm
+from .models import Producto
 # Create your views here.
 
 
 def home(request):
-    return render(request, 'notfood/home.html')
+    Productos = Producto.objects.all()
+    data = {
+        'Productos':Productos
+    }
+    return render(request, 'notfood/home.html',data)
 
 
 def registro_usuario(request):

@@ -1,6 +1,20 @@
 {% extends 'notfood/base.html' %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'notfood/' %}css/style.css">
 {% block contenido %}
-<img src="https://i.pinimg.com/474x/41/df/83/41df8375e5e7b5d2788ca3046dccfeac.jpg" alt="">
+<div class="catalogo">
+{% for p in Productos %}
+    <div class="contenedor-producto">
+        <img class="img-producto" src="{{p.foto.url}}" alt="imagen-producto">
+        <div class="descripcion-producto">   
+            <h5 class="tipo-producto">{{p.tipo}}</h5>
+            <h3 class="title-producto">{{p.nombre}}</h3>
+            <h5 class="precio-producto">{{p.precio}}</h5>
+            <h5 class="stock-producto">{{p.stock}}</h5>
+            <button class="agregar-producto">COMPRAR</button>
+            
+        </div> 
+    </div>
+{% endfor %}
+</div>
+
 {% endblock %}

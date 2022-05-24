@@ -39,7 +39,6 @@ a {
 footer {
     background: white;
     z-index: 5;
-    position: fixed;
     padding-block: 2.5rem;
     box-shadow: 0px 5px 30px 11px rgba(0, 0, 0, 0.35);
     padding-inline: 5%;
@@ -63,4 +62,79 @@ p {
 
 .footer-links {
     margin-right: 5rem;
+}
+
+
+
+
+.catalogo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5rem;
+}
+.contenedor-producto{
+    border-radius: 2rem;
+    margin-inline: 1rem;
+    margin-block: 1rem;
+    transition: all .2s;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.contenedor-producto:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.img-producto{
+    border-radius: 2rem 2rem 0 0;
+    width: 15rem;
+}
+.descripcion-producto{
+    padding: 1.5rem 1.5rem 0 1.5rem ;
+}
+.tipo-producto{
+    margin: 0;
+    font-weight: 300;
+}
+.title-producto{
+    margin: 0;
+    font-weight: 700;
+}
+.precio-producto{
+    margin-block: .5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: end;
+}
+.precio-producto::before{
+    content: "$ ";
+}
+.stock-producto{
+    margin: 0;
+    font-weight: 300;
+    text-align: end;
+}
+.stock-producto::before{
+    content: "Unidades en stock: ";
+    color: rgb(61, 61, 61);
+}
+.agregar-producto{
+    background: white;
+    color: black;
+    font-weight: 700;
+    width: 125%;
+    height: 2rem;
+    text-align: center;
+    margin-inline: -1.5rem;
+    margin-top: .6rem;
+    border-radius: 0 0 2rem 2rem;
+    border:none;
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: inset rgba(0, 0, 0, 0.05) 0px 5px 15px;
+    transition: all .2s;
+}
+.agregar-producto:hover{
+    
+    background: rgb(61, 61, 61);
+    font-weight: 300;
+    color: white;
 }
